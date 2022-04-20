@@ -17,11 +17,11 @@ function App() {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await api.get('/skills');
-      // const response = await api.get('/projects/list')
+        const response = await api.get('/skills/4');
+        /* used from json-server for testing locally */
+        /* const response = await api.get('/projects/list') */
         if(response && response.data) setSkills(response.data);
-        console.log('-------', response.data)
-        console.log('--ss--', skills)
+       
         if (response.status !== 200) throw Error('SOmething went wrong! No data received from API call');
         setFetchError(null);
       } catch(err) {
@@ -42,21 +42,18 @@ function App() {
   useEffect(() => {
     const fetchWorks = async () => {
       try {
-        const workResponse = await api.get('/projects');
+        const workResponse = await api.get('/projects/4');
+        /* used from json-server for testing locally */
+        /* const workResponse = await api.get('/projects'); */
         if(workResponse && workResponse.data) setWork(workResponse.data);
-        console.log('-------', workResponse.data)
-        console.log('--work--', work)
-        
-        if (workResponse.status !== 200) throw Error('SOmething went wrong! No data received from API call');
+    
+        if (workResponse.status !== 200) throw Error('Something went wrong! No data received from API call');
         setFetchError(null);
       } catch(err) {
           if (err.response) {
-            // not ok (not in 200 response range satus code)
-            console.log(err.response.data);
-            console.log(err.response.status);
+            // not ok (not in 200 response range satus code
             setFetchError(err.message);
           } else {
-            console.log(`Error: ${err.message}`);
             setFetchError(err.message);
           }
       }
@@ -67,11 +64,9 @@ function App() {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const userResponse = await api.get('/user');
+        const userResponse = await api.get('/users/4');
+       // const userResponse = await api.get('/user');
         if(userResponse && userResponse.data) setUser(userResponse.data[0]);
-        console.log('--uset-----', userResponse.data[0])
-        console.log('--user--', user)
-        console.log('[[[[[[', userResponse)
         if (userResponse.status !== 200) throw Error('SOmething went wrong! No data received from API call');
         setFetchError(null);
       } catch(err) {

@@ -39,8 +39,8 @@
 "user": [
    {
       "id": 3,
-      "firstName": "Lisle",
-      "lastName": "Lojo",
+      "first": "Lisle",
+      "last": "Lojo",
       "email": "lisle@gmail.com",
       "title": "Full Stack Developer",
       "intro": "I’m a full-stack developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building responsive full-stack web applications.",
