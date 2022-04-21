@@ -3,7 +3,6 @@ import CSS from '../assets/css.png';
 import JavaScript from '../assets/javascript.png';
 import ReactImg from '../assets/react.png';
 import Node from '../assets/node.png';
-import FireBase from '../assets/firebase.png';
 import AWS from '../assets/aws.png';
 import aspnet from '../assets/aspnet.png';
 import GitHub from '../assets/github.png';
@@ -29,29 +28,32 @@ const Skill = ( {skill} ) => {
          srcImg =  <img className='w-20 mx-auto' src={PHP} alt="PHP icon" />
          break; 
       case "ReactImg":
-         srcImg =  <img className='w-20 mx-auto' src={ReactImg} alt="PHP icon" />
+         srcImg =  <img className='w-20 mx-auto' src={ReactImg} alt="React icon" />
          break;  
       case "Node":
-         srcImg =  <img className='w-20 mx-auto' src={Node} alt="PHP icon" />
+         srcImg =  <img className='w-20 mx-auto' src={Node} alt="Node icon" />
          break;  
       case "GitHub":
-         srcImg =  <img className='w-20 mx-auto' src={GitHub} alt="PHP icon" />
+         srcImg =  <img className='w-20 mx-auto' src={GitHub} alt="GitHub icon" />
          break;  
       case "Vue":
-         srcImg =  <img className='w-20 mx-auto' src={Vue} alt="PHP icon" />
+         srcImg =  <img className='w-20 mx-auto' src={Vue} alt="Vue icon" />
          break; 
       case "Mongo":
-         srcImg =  <img className='w-20 mx-auto' src={Mongo} alt="PHP icon" />
+         srcImg =  <img className='w-20 mx-auto' src={Mongo} alt="Mongo icon" />
          break;  
       case "Tailwind":
-         srcImg =  <img className='w-20 mx-auto' src={Tailwind} alt="PHP icon" />
+         srcImg =  <img className='w-20 mx-auto' src={Tailwind} alt="Tailwind icon" />
          break; 
       case "Figma":
-         srcImg =  <img className='w-20 mx-auto' src={Figma} alt="PHP icon" />
+         srcImg =  <img className='w-20 mx-auto' src={Figma} alt="Figma icon" />
          break; 
       case "aspnet":
-         srcImg =  <img className='w-20 mx-auto' src={aspnet} alt="PHP icon" />
-         break;                  
+         srcImg =  <img className='w-20 mx-auto' src={aspnet} alt="ASPNet icon" />
+         break; 
+      case "JavaScript":
+         srcImg =  <img className='w-20 mx-auto' src={JavaScript} alt="PHP icon" />
+         break;                      
       default:
          srcImg =  <img className='w-20 mx-auto' src={HTML} alt="HTML icon" />    
 

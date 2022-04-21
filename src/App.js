@@ -6,11 +6,12 @@ import Skills from "./components/Skills";
 import Work from "./components/Work";
 import api from './api/portfolio';
 import { useState, useEffect } from "react";
+// import { render } from "@testing-library/react";
 
 
 function App() {
   const [skills, setSkills] = useState([]);
-  const [work, setWork] = useState([]);
+  // const [works, setWorks] = useState([]);
   const [user, setUser] = useState([]);
   const [fetchError, setFetchError] = useState(null);
 
@@ -20,6 +21,7 @@ function App() {
         const response = await api.get('/skills/4');
         /* used from json-server for testing locally */
         /* const response = await api.get('/projects/list') */
+        // console.log(' skills from API ', response.data)
         if(response && response.data) setSkills(response.data);
        
         if (response.status !== 200) throw Error('SOmething went wrong! No data received from API call');
@@ -39,27 +41,32 @@ function App() {
     fetchSkills();
   }, [])
 
-  useEffect(() => {
-    const fetchWorks = async () => {
-      try {
-        const workResponse = await api.get('/projects/4');
-        /* used from json-server for testing locally */
-        /* const workResponse = await api.get('/projects'); */
-        if(workResponse && workResponse.data) setWork(workResponse.data);
+
+  // useEffect(() => {
+  //   const fetchWorks = async () => {
+  //     try {
+  //       const worksResponse = await api.get('/projects/4');
+  //       /* used from json-server for testing locally */
+  //       /* const workResponse = await api.get('/projects'); */
+  //       if(worksResponse && worksResponse.data) setWorks(worksResponse.data);
+  //   console.log(' work response from API ', worksResponse.data);
+  //   console.log(' work length ', worksResponse.data.length);
+
     
-        if (workResponse.status !== 200) throw Error('Something went wrong! No data received from API call');
-        setFetchError(null);
-      } catch(err) {
-          if (err.response) {
-            // not ok (not in 200 response range satus code
-            setFetchError(err.message);
-          } else {
-            setFetchError(err.message);
-          }
-      }
-    }
-    fetchWorks();
-  }, [])
+
+  //       if (worksResponse.status !== 200) throw Error('Something went wrong! No data received from API call');
+  //       setFetchError(null);
+  //     } catch(err) {
+  //         if (err.response) {
+  //           // not ok (not in 200 response range satus code
+  //           setFetchError(err.message);
+  //         } else {
+  //           setFetchError(err.message);
+  //         }
+  //     }
+  //   }
+  //   fetchWorks();
+  // }, [])
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -67,7 +74,7 @@ function App() {
         const userResponse = await api.get('/users/4');
        // const userResponse = await api.get('/user');
         if(userResponse && userResponse.data) setUser(userResponse.data[0]);
-        if (userResponse.status !== 200) throw Error('SOmething went wrong! No data received from API call');
+        if (userResponse.status !== 200) throw Error('Something went wrong! No data received from API call');
         setFetchError(null);
       } catch(err) {
           if (err.response) {
@@ -84,16 +91,18 @@ function App() {
     fetchUser();
   }, [])
 
+  
     return (
       <div>
         <Navbar />
         <Home user={user} />
         <About user={user} />
         <Skills skills={skills} />
-        <Work work={work} />
-        <Contact />
+        <Work /> 
+        <Contact user={user}/>
       </div>
     );
+  
 }
 
 export default App;
