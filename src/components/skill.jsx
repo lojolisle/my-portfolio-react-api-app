@@ -1,7 +1,7 @@
 import HTML from '../assets/html.png';
 import CSS from '../assets/css.png';
 import JavaScript from '../assets/javascript.png';
-import ReactImg from '../assets/react.png';
+import React from '../assets/react.png';
 import Node from '../assets/node.png';
 import AWS from '../assets/aws.png';
 import aspnet from '../assets/aspnet.png';
@@ -14,7 +14,7 @@ import Mongo from '../assets/mongo.png';
 
 const Skill = ( {skill} ) => {
    let srcImg = "";
-   switch (skill.logo) {
+   switch (skill.name) {
       case "HTML":
          srcImg =  <img className='w-20 mx-auto' src={HTML} alt="HTML icon" />
          break;
@@ -27,8 +27,8 @@ const Skill = ( {skill} ) => {
       case "PHP":
          srcImg =  <img className='w-20 mx-auto' src={PHP} alt="PHP icon" />
          break; 
-      case "ReactImg":
-         srcImg =  <img className='w-20 mx-auto' src={ReactImg} alt="React icon" />
+      case "React":
+         srcImg =  <img className='w-20 mx-auto' src={React} alt="React icon" />
          break;  
       case "Node":
          srcImg =  <img className='w-20 mx-auto' src={Node} alt="Node icon" />

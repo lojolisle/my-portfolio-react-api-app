@@ -5,6 +5,9 @@ import { useEffect, useState } from "react";
 import MealBuddyAppImg from '../assets/MealBuddyApp.png';
 import RetroHutImg from '../assets/RetroHut.jpg';
 import RXImg from '../assets/Rx-Automation.jpeg';
+import ApiGeoCode from '../assets/Api-LocationWeather.png';
+import AccessNow from '../assets/AccessNow.png';
+import PhpLaravel from '../assets/phpLaravel.png';
 
 const Work = () => {
   const [works, setWorks] = useState([]);
@@ -13,12 +16,15 @@ const Work = () => {
   }, [])
 
   // cant retrieve image from API
-  const imgs = [RXImg, MealBuddyAppImg, RetroHutImg];
+ // const imgs = [RetroHutImg, MealBuddyAppImg, RXImg, ApiGeoCode, AccessNow, PhpLaravel];
+  const imgs = {RetroHutImg : RetroHutImg, MealBuddyAppImg: MealBuddyAppImg, RXImg: RXImg, ApiGeoCode:ApiGeoCode, AccessNow:AccessNow, PhpLaravel:PhpLaravel};
 
+console.log('img---', imgs.RetroHutImg)
 
   function getWorks() {
-    axios.get('http://localhost:8080/api/projects/4').then(function(response) {
+    axios.get('https://infinite-beyond-59492.herokuapp.com/api/projects/1').then(function(response) {
       setWorks(response.data);
+      console.log('Projects ---', response.data)
     });
   }
  
@@ -36,33 +42,39 @@ const Work = () => {
           {/* Container */}
           {
             works.map((work, key) =>  
+            <div>
               <div
-                  style={{ backgroundImage: `url(${imgs[key]})` }}
+                  style={{ backgroundImage: `url(${imgs[work.slug]})` }}
                   className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
               >
-              {/* Hover Effects */}
-              <div className='opacity-0 group-hover:opacity-100'>
-              <span className='text-2xl font-bold text-white tracking-wider'>
-                {work.title}
-              </span>
-              <div className='pt-8 text-center'>
-              <a  href={`${work.url}`}>
-                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                        Demo
-                    </button>
-                  </a>
-                  <a  href={`${work.url}`}>
-                    <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
-                        Code
-                    </button>
-                  </a>
+                {/* Hover Effects */}
+                <div className='opacity-0 group-hover:opacity-100'>
+                  <span className='text-2xl font-bold text-white tracking-wider'>
+                    {work.title}
+                  </span>
+                  <div className='pt-8 text-center'>
+                    <a  href={`${work.url}`} target="_blank">
+                        <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                            Demo
+                        </button>
+                    </a>
+                    <a  href={`${work.url}`} target="_blank">
+                      <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>
+                          Code
+                      </button>
+                    </a>
+                  </div>
                 </div>
+               
               </div>
+             
+              <p className='text-left  px-4 py-3'>{work.content}</p>
             </div>
-        
             )    
           }
-        </div>   
+       
+        </div>
+      
       </div>
     </div>
   );
