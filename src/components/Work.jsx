@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 import MealBuddyAppImg from '../assets/MealBuddyApp.png';
 import RetroHutImg from '../assets/RetroHut.jpg';
-import RXImg from '../assets/Rx-Automation.jpeg';
-import ApiGeoCode from '../assets/Api-LocationWeather.png';
+import RXImg from '../assets/rxAuto.jpg';
+import ApiGeoCode from '../assets/map.png';
 import AccessNow from '../assets/AccessNow.png';
 import PhpLaravel from '../assets/phpLaravel.png';
 
@@ -45,7 +45,7 @@ console.log('img---', imgs.RetroHutImg)
             <div>
               <div
                   style={{ backgroundImage: `url(${imgs[work.slug]})` }}
-                  className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center mx-auto content-div'
+                  className='shadow-lg shadow-[#7c7377] group container rounded-md flex justify-center items-center mx-auto content-div'
               >
                 {/* Hover Effects */}
                 <div className='opacity-0 group-hover:opacity-100'>

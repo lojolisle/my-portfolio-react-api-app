@@ -48,7 +48,7 @@ const Skill = ( {skill} ) => {
       case "Figma":
          srcImg =  <img className='w-20 mx-auto' src={Figma} alt="Figma icon" />
          break; 
-      case "aspnet":
+      case "Asp.net":
          srcImg =  <img className='w-20 mx-auto' src={aspnet} alt="ASPNet icon" />
          break; 
       case "JavaScript":
@@ -60,7 +60,7 @@ const Skill = ( {skill} ) => {
    }
    return (
        
-      <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
+      <div className='shadow-md shadow-[#d9bac8] hover:scale-110 duration-500'>
          {srcImg}
          <p className='my-4'>{skill.name}</p>
          
