@@ -1,3 +1,16 @@
+
+###  Project Deployment ###
+
+My React app is deployed using Vercel. 
+Here is the site url https://portfolio-react-api-app.vercel.app/
+
+I have used Laravel CMS API end points which is deployed on Heroku
+Url http://infinite-beyond-59492.herokuapp.com/console/login
+Login Creds: lisle@gmail.com/password
+
+Github Link : https://github.com/lojolisle/my-portfolio-react-api-app
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -67,4 +80,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/
+docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+

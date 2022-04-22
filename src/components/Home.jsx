@@ -9,7 +9,7 @@ const Home = ( {user} ) => {
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <p className='text-pink-600'>Hello.. my name is</p>
         <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f9]'>
-          {user.first} Lojo
+          {user.first} {user.last}
         </h1>
         <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b9]'>
           I'm a Full Stack Developer.
