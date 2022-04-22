@@ -1,8 +1,11 @@
 
 ###  Project Deployment ###
 
+
 My React app is deployed using Vercel. 
 Here is the site url https://portfolio-react-api-app.vercel.app/
+
+I have used tailwindcss for styling
 
 I have used Laravel CMS API end points which is deployed on Heroku
 Url http://infinite-beyond-59492.herokuapp.com/console/login

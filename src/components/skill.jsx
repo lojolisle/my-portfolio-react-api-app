@@ -62,8 +62,7 @@ const Skill = ( {skill} ) => {
        
       <div className='shadow-md shadow-[#d9bac8] hover:scale-110 duration-500'>
          {srcImg}
-         <p className='my-4'>{skill.name}</p>
-         
+         <p className='my-4'>{skill.name}</p>   
       </div>
    )
 }

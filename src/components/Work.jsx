@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from "axios"
 import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
 import MealBuddyAppImg from '../assets/MealBuddyApp.png';
 import RetroHutImg from '../assets/RetroHut.jpg';
 import RXImg from '../assets/rxAuto.jpg';
@@ -15,16 +14,13 @@ const Work = () => {
     getWorks();
   }, [])
 
-  // cant retrieve image from API
- // const imgs = [RetroHutImg, MealBuddyAppImg, RXImg, ApiGeoCode, AccessNow, PhpLaravel];
+  // cant retrieve image from API. had to use a little hack here
   const imgs = {RetroHutImg : RetroHutImg, MealBuddyAppImg: MealBuddyAppImg, RXImg: RXImg, ApiGeoCode:ApiGeoCode, AccessNow:AccessNow, PhpLaravel:PhpLaravel};
 
-console.log('img---', imgs.RetroHutImg)
 
   function getWorks() {
     axios.get('https://infinite-beyond-59492.herokuapp.com/api/projects/1').then(function(response) {
       setWorks(response.data);
-      console.log('Projects ---', response.data)
     });
   }
  
@@ -39,7 +35,7 @@ console.log('img---', imgs.RetroHutImg)
         </div>
         <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
 
-          {/* Container */}
+          {/* Container section */}
           {
             works.map((work, key) =>  
             <div>
