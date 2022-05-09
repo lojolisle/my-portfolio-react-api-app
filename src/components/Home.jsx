@@ -7,20 +7,21 @@ const Home = ( {user} ) => {
     <div name='home' className='w-full h-screen bg-[#0a192f]'>
       {/* Start Container */}
       <div className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
-        <p className='text-pink-600'>Hello.. my name is</p>
+        <p className='text-amber-600'>Hello!!  I am  </p>
         <h1 className='text-4xl sm:text-7xl font-bold text-[#ccd6f9]'>
           {user.first} {user.last}
         </h1>
-        <h2 className='text-4xl sm:text-7xl font-bold text-[#8892b9]'>
-          I'm a Full Stack Developer.
+        {/* [#a4b988] */}
+        <h2 className='text-4xl sm:text-7xl font-bold text-amber-700'>
+          Full Stack Developer
         </h2>
-        <p className='text-[#8892b0] py-4 max-w-[700px]'>
-          I bring yours ideas to life with code. A passionate developer who focusses on writting clean,elegant and efficient code.
+        <p className='text-[#cececf] py-4 max-w-[700px]'>
+          I bring your ideas to life by creating clean, elegant and efficient software.
         </p>
         <div>
           <Link to='work' smooth={true} duration={500}>
-            <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'>
-              View Work
+            <button className='text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-amber-600 hover:border-amber-600'>
+              View My Work
               <span className='group-hover:rotate-90 duration-300'>
                 <HiArrowNarrowRight className='ml-3 ' />
               </span>

@@ -9,8 +9,9 @@ import {
 } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import Logo from '../assets/logo.jpg';
+import Logo from '../assets/logo.png';
 import { Link } from 'react-scroll';
+
 
 let linkedinUrl = "https://www.linkedin.com/in/lislelojo/";
 let githubUrl = "https://github.com/lojolisle";
@@ -29,27 +30,27 @@ const Navbar = () => {
       <ul className='hidden md:flex'>
         <li>
           <Link to='home' smooth={true} duration={500}>
-            Home
+            <span className='hover:text-amber-500'>Home</span>
           </Link>
         </li>
         <li>
           <Link to='about' smooth={true} duration={500}>
-            About
+          <span className='hover:text-amber-500'>About</span>
           </Link>
         </li>
         <li>
           <Link to='skills' smooth={true} duration={500}>
-            Skills
+          <span className='hover:text-amber-500'>Skills</span>
           </Link>
         </li>
         <li>
           <Link to='work' smooth={true} duration={500}>
-            Work
+          <span className='hover:text-amber-500'>Work</span>
           </Link>
         </li>
         <li>
           <Link to='contact' smooth={true} duration={500}>
-            Contact
+          <span className='hover:text-amber-500'>Contact</span>
           </Link>
         </li>
       </ul>
@@ -101,7 +102,7 @@ const Navbar = () => {
       {/* Social icons section */}
       <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
         <ul>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#3f32cd]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href={linkedinUrl} target="_blank"
@@ -109,7 +110,7 @@ const Navbar = () => {
               Linkedin <FaLinkedin size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#2c2b2b]'>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#484848]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href={githubUrl} target="_blank"
@@ -117,16 +118,16 @@ const Navbar = () => {
               Github <FaGithub size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#75cbb9]'>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#507b72]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
-              href='/'
+              href='mailto:lislelojo21@gmail.com'
               
             >
               Email <HiOutlineMail size={30} />
             </a>
           </li>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#8a187b]'>
             <a
               className='flex justify-between items-center w-full text-gray-300'
               href={resumeUrl} target="_blank"
