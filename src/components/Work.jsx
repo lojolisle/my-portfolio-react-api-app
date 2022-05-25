@@ -6,6 +6,14 @@ import RetroHutImg from '../assets/retro-hut.jpeg';
 import RXImg from '../assets/automation.jpeg';
 import ApiGeoCode from '../assets/geo1.jpeg';
 
+import HTML from '../assets/html.png';
+import Tailwind from '../assets/tailwind.png';
+import Vue from '../assets/vue.png';
+import aspnet from '../assets/aspnet.png';
+import CSS from '../assets/css.png';
+import JavaScript from '../assets/javascript.png';
+import Node from '../assets/node.png';
+
 
 const Work = () => {
   const [works, setWorks] = useState([]);
@@ -15,7 +23,12 @@ const Work = () => {
 
   // cant retrieve image from API. had to use a little hack here
   const imgs = {RetroHutImg : RetroHutImg, MealBuddyAppImg: MealBuddyAppImg, RXImg: RXImg, ApiGeoCode:ApiGeoCode};
-
+  const techs = {
+    RetroHutImg : [<img className='w-7 mx-auto' src={HTML} alt='HTML icon' />, <img className='w-7 mx-auto' src={CSS} alt='HTML icon' />, <img className='w-7 mx-auto' src={JavaScript} alt='HTML icon' /> ], 
+    MealBuddyAppImg: [<img className='w-7 mx-auto' src={HTML} alt='HTML icon' />, <img className='w-7 mx-auto' src={CSS} alt='HTML icon' />, <img className='w-7 mx-auto' src={JavaScript} alt='HTML icon' /> ], 
+    RXImg: [<img className='w-7 mx-auto' src={aspnet} alt='HTML icon' />, <img className='w-7 mx-auto' src={HTML} alt='HTML icon' />, <img className='w-7 mx-auto' src={CSS} alt='HTML icon' />, <img className='w-7 mx-auto' src={JavaScript} alt='HTML icon' /> ], 
+    ApiGeoCode: [<img className='w-7 mx-auto' src={Node} alt='HTML icon' />, <img className='w-7 mx-auto' src={Vue} alt='HTML icon' />, <img className='w-7 mx-auto' src={Tailwind} alt='HTML icon' />, <img className='w-7 mx-auto' src={JavaScript} alt='HTML icon' /> ] 
+  }
 
   function getWorks() {
     axios.get('https://infinite-beyond-59492.herokuapp.com/api/projects/1').then(function(response) {
@@ -60,6 +73,10 @@ const Work = () => {
                           Codes
                       </button>
                     </a>
+                  </div>
+                  <div className='flex pt-8 text-center text-black-700'>
+                    {techs[work.slug]}
+                  
                   </div>
                 </div>
                
