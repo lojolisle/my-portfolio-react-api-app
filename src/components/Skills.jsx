@@ -4,7 +4,7 @@ import Skill from '../components/skill';
 const Skills = ({ skills }) => {
 
   return (    
-    <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300'>
+    <div name='skills' className='w-full max-h-full bg-[#0a192f] text-gray-300'>
       {/* Start Container */}
      
       <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
